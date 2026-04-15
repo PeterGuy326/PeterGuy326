@@ -5,9 +5,7 @@
   <a href="https://peterguy326.github.io/"><img src="https://img.shields.io/badge/-peterguy326.github.io-181717?style=flat-square&logo=github&logoColor=white" /></a>&nbsp;
   <a href="https://space.bilibili.com/140283216"><img src="https://img.shields.io/badge/-Bilibili-00A1D6?style=flat-square&logo=bilibili&logoColor=white" /></a>&nbsp;
   <a href="https://www.zhihu.com/people/wei-ni-hei-mi-fan"><img src="https://img.shields.io/badge/-Zhihu-0084FF?style=flat-square&logo=zhihu&logoColor=white" /></a>&nbsp;
-  <a href="https://github.com/PeterGuy326"><img src="https://img.shields.io/github/followers/PeterGuy326?label=Follow&style=flat-square" /></a>
-</p>
-<p align="center">
+  <a href="https://github.com/PeterGuy326"><img src="https://img.shields.io/github/followers/PeterGuy326?label=Follow&style=flat-square" /></a>&nbsp;
   <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />&nbsp;
   <img src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white" />&nbsp;
   <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />&nbsp;
