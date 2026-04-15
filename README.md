@@ -3,43 +3,26 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/PeterGuy326"><img src="https://img.shields.io/github/followers/PeterGuy326?label=Follow&style=social" /></a>&nbsp;&nbsp;
-  <a href="https://peterguy326.github.io/"><img src="https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=4285F4" height="25" /></a>&nbsp;
-  <a href="https://space.bilibili.com/140283216"><img src="https://img.shields.io/badge/Bilibili-00A1D6?style=for-the-badge&logo=bilibili&logoColor=white&labelColor=00A1D6" height="25" /></a>&nbsp;
-  <a href="https://www.zhihu.com/people/wei-ni-hei-mi-fan"><img src="https://img.shields.io/badge/Zhihu-0084FF?style=for-the-badge&logo=zhihu&logoColor=white&labelColor=0084FF" height="25" /></a>
+  <a href="https://peterguy326.github.io/"><img src="https://img.shields.io/badge/-peterguy326.github.io-181717?style=flat-square&logo=github&logoColor=white" /></a>&nbsp;
+  <a href="https://space.bilibili.com/140283216"><img src="https://img.shields.io/badge/-Bilibili-00A1D6?style=flat-square&logo=bilibili&logoColor=white" /></a>&nbsp;
+  <a href="https://www.zhihu.com/people/wei-ni-hei-mi-fan"><img src="https://img.shields.io/badge/-Zhihu-0084FF?style=flat-square&logo=zhihu&logoColor=white" /></a>&nbsp;
+  <a href="https://github.com/PeterGuy326"><img src="https://img.shields.io/github/followers/PeterGuy326?label=Follow&style=flat-square" /></a>
 </p>
-
-<br>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />&nbsp;
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" />&nbsp;
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />&nbsp;
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />&nbsp;
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://skillicons.dev/icons?i=nodejs,go,ts,python,docker&theme=dark" alt="Tech Stack" />
 </p>
-
-<br>
 
 <p align="center">
-  <img src="https://github-trophies.vercel.app/?username=PeterGuy326&theme=radical&no-frame=true&row=1&column=7" alt="Trophies" />
+  <img src="https://github-trophies.vercel.app/?username=PeterGuy326&theme=radical&no-frame=true&row=1&column=7&margin-w=10" alt="Trophies" />
 </p>
-
-<br>
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" width="100%" alt="Profile Details" />
 </p>
-
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true&hide_border=true" width="100%" alt="Activity Graph" />
 </p>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake.svg" />
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake.svg" width="100%" />
-</picture>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
