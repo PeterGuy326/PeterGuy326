@@ -12,15 +12,16 @@
   <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" />&nbsp;
   <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
 </p>
-<p align="center">
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical" alt="Stats" />&nbsp;<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical" alt="Top Languages" />
-</p>
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" width="100%" alt="Profile Details" />
-</p>
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true&hide_border=true" width="100%" alt="Activity Graph" />
-</p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="35%" align="center"><img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical" width="100%" alt="Stats" /></td>
+    <td width="65%" align="center"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" width="100%" alt="Profile Details" /></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical" width="100%" alt="Top Languages" /></td>
+    <td align="center"><img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true&hide_border=true" width="100%" alt="Activity Graph" /></td>
+  </tr>
+</table>
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
 </p>
