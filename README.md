@@ -26,10 +26,14 @@
 #### GitHub Stats
 
 <p>
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=PeterGuy326&show_icons=true&theme=radical&count_private=true&line_height=40" alt="PeterGuy326's github stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PeterGuy326&layout=compact&theme=radical&hide=html,css,less,java,vue,FreeMarker,Php,scss,makefile" alt="Top Langs" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical" alt="Stats" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical" alt="Top Languages by Repo" />
 </p>
 
 <p>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=PeterGuy326&theme=radical" alt="GitHub Streak" />
+</p>
+
+<p>
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=PeterGuy326&theme=radical&utcOffset=8" alt="Productive Time" />
 </p>
