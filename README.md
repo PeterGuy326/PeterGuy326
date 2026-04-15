@@ -18,7 +18,11 @@
 ### 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,go,js,ts,python,git,docker,vscode&perline=8" alt="Tech Stack" />
+  <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
+  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
 </p>
 
 ---
@@ -28,21 +32,6 @@
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" width="100%" alt="Profile Details" />
 </p>
-
-<p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical" alt="Stats" />&nbsp;
-  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=PeterGuy326&theme=radical&hide_border=true" alt="Streak" />
-</p>
-
-<p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical" alt="Top Languages by Repo" />&nbsp;
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=PeterGuy326&theme=radical" alt="Top Languages by Commit" />&nbsp;
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=PeterGuy326&theme=radical&utcOffset=8" alt="Productive Time" />
-</p>
-
----
-
-### 📈 Activity Graph
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true&hide_border=true" width="100%" alt="Activity Graph" />
