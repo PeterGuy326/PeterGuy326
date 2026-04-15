@@ -25,14 +25,19 @@
 
 #### GitHub Stats
 
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" alt="Profile Details" />
+
 <p>
   <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical" alt="Stats" />
   <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical" alt="Top Languages by Repo" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=PeterGuy326&theme=radical" alt="Top Languages by Commit" />
 </p>
 
 <p>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=PeterGuy326&theme=radical" alt="GitHub Streak" />
 </p>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true" alt="Activity Graph" />
 
 <p>
   <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=PeterGuy326&theme=radical&utcOffset=8" alt="Productive Time" />
