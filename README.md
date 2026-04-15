@@ -22,12 +22,24 @@
 <br>
 
 <p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=PeterGuy326&theme=radical&no-frame=true&row=1&column=7" alt="Trophies" />
+</p>
+
+<br>
+
+<p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" width="100%" alt="Profile Details" />
 </p>
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true&hide_border=true" width="100%" alt="Activity Graph" />
 </p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake.svg" />
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake.svg" width="100%" />
+</picture>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
