@@ -13,13 +13,17 @@
   <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
 </p>
 <p align="center">
-  <img src="https://github-trophies.vercel.app/?username=PeterGuy326&theme=radical&no-frame=true&row=1&column=7&margin-w=10" alt="Trophies" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=PeterGuy326&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" alt="Stats" />&nbsp;
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical" alt="Top Languages" />
 </p>
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" width="100%" alt="Profile Details" />
 </p>
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true&hide_border=true" width="100%" alt="Activity Graph" />
+</p>
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Dev Quote" />
 </p>
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
