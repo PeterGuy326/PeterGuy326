@@ -36,7 +36,7 @@ I authored the DingTalk gateway integration and QR-code auth support for [NousRe
 
 **Upstream squash merge** (no co-author trailer): [`9deeee7b`](https://github.com/NousResearch/hermes-agent/commit/9deeee7b)
 
-See [AUTHORSHIP.md](https://github.com/PeterGuy326/hermes-agent/blob/main/AUTHORSHIP.md) in my fork for the full record.
+See [AUTHORSHIP.md](https://github.com/PeterGuy326/hermes-agent/blob/authorship-record/AUTHORSHIP.md) in my fork for the full record.
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
