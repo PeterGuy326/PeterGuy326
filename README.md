@@ -18,6 +18,26 @@
     <td width="65%"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" width="100%" alt="Profile Details" /><br><img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true&hide_border=true" width="100%" alt="Activity Graph" /></td>
   </tr>
 </table>
+
+## Open Source Contributions / 开源贡献
+
+### NousResearch/hermes-agent — DingTalk Gateway
+
+I authored the DingTalk gateway integration and QR-code auth support for [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent). The work was squashed upstream without a `Co-authored-by` trailer — the original authored commits remain on my fork as timestamped evidence.
+
+**Original commits** (authored as `修雨 <huyizhou.hyz@alibaba-inc.com>`):
+
+| Date (UTC) | SHA | Description |
+|---|---|---|
+| 2026-04-12 12:09:50 | [`94666e0f`](https://github.com/PeterGuy326/hermes-agent/commit/94666e0f) | feat(gateway): 增加钉钉平台配置及支持 |
+| 2026-04-15 01:27:09 | [`fbcea2ef`](https://github.com/PeterGuy326/hermes-agent/commit/fbcea2ef) | fix(dingtalk): accept oapi.dingtalk.com webhook domain for stream mode reply routing |
+| 2026-04-15 01:29:43 | [`4cd402f9`](https://github.com/PeterGuy326/hermes-agent/commit/4cd402f9) | fix(dingtalk): adapt message handler to dingtalk-stream SDK CallbackMessage format |
+| 2026-04-15 01:33:49 | [`43d7d5d9`](https://github.com/PeterGuy326/hermes-agent/commit/43d7d5d9) | feat(dingtalk): add QR code scan authorization for setup wizard |
+
+**Upstream squash merge** (no co-author trailer): [`9deeee7b`](https://github.com/NousResearch/hermes-agent/commit/9deeee7b)
+
+See [AUTHORSHIP.md](https://github.com/PeterGuy326/hermes-agent/blob/main/AUTHORSHIP.md) in my fork for the full record.
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
 </p>
