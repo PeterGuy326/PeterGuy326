@@ -12,29 +12,58 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - name: Fetch SVG snapshots
+      - name: Fetch SVG snapshots with content validation
         run: |
+          set -euo pipefail
           mkdir -p assets
-          curl_args=(--fail --silent --show-error --retry 3 --retry-delay 5 --max-time 30)
 
-          curl "${curl_args[@]}" -o assets/header.svg \
+          # Upstream dynamic SVG services occasionally return HTTP 200 with an
+          # SVG body whose only content is "ERROR!!! API rate limit ...".
+          # We must grep the body, not just trust the status code, otherwise
+          # the README ends up displaying red error pages.
+          fetch_validated() {
+            local dest="$1"
+            local url="$2"
+            local tmp
+            tmp="$(mktemp)"
+            local attempt
+            for attempt in 1 2 3 4 5; do
+              if curl --fail --silent --show-error --max-time 30 -o "$tmp" "$url"; then
+                if grep -qE "(ERROR!!!|API rate limit|rate limit already exceeded)" "$tmp"; then
+                  echo "  attempt $attempt: $dest got error page, sleeping 60s..."
+                  sleep 60
+                  continue
+                fi
+                mv "$tmp" "$dest"
+                echo "  ok: $dest ($(wc -c < "$dest")B)"
+                return 0
+              fi
+              echo "  attempt $attempt: curl failed for $dest, sleeping 30s..."
+              sleep 30
+            done
+            echo "  give up: keeping previous $dest"
+            rm -f "$tmp"
+            return 0
+          }
+
+          fetch_validated assets/header.svg \
             "https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Hey%20%F0%9F%91%8B%2C%20I'm%20Peter&fontSize=36&fontColor=fff&animation=fadeIn&fontAlignY=28&desc=Node.js%20Developer%20%7C%20JavaScript%20%26amp%3B%20Go%20Enthusiast&descSize=16&descAlignY=50&descAlign=50"
 
-          curl "${curl_args[@]}" -o assets/footer.svg \
+          fetch_validated assets/footer.svg \
             "https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"
 
-          curl "${curl_args[@]}" -o assets/stats.svg \
+          fetch_validated assets/stats.svg \
             "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical"
 
-          curl "${curl_args[@]}" -o assets/repos-per-language.svg \
+          fetch_validated assets/repos-per-language.svg \
             "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical"
 
-          curl "${curl_args[@]}" -o assets/profile-details.svg \
+          fetch_validated assets/profile-details.svg \
             "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical"
 
-          curl "${curl_args[@]}" -o assets/activity-graph.svg \
+          fetch_validated assets/activity-graph.svg \
             "https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=radical&area=true&hide_border=true"
 
       - name: Commit refreshed assets if changed
