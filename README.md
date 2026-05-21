@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Hey%20%F0%9F%91%8B%2C%20I'm%20Peter&fontSize=36&fontColor=fff&animation=fadeIn&fontAlignY=28&desc=Node.js%20Developer%20%7C%20JavaScript%20%26amp%3B%20Go%20Enthusiast&descSize=16&descAlignY=50&descAlign=50" width="100%" />
+  <img src="assets/header.svg" width="100%" />
 </p>
 <p align="center">
   <a href="https://peterguy326.github.io/"><img src="https://img.shields.io/badge/-peterguy326.github.io-181717?style=flat-square&logo=github&logoColor=white" /></a>&nbsp;
@@ -14,8 +14,8 @@
 </p>
 <table>
   <tr>
-    <td width="35%"><img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical" width="100%" alt="Stats" /><br><img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical" width="100%" alt="Top Languages" /></td>
-    <td width="65%"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical" width="100%" alt="Profile Details" /><br><img src="https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=redical&area=true&hide_border=true" width="100%" alt="Activity Graph" /></td>
+    <td width="35%"><img src="assets/stats.svg" width="100%" alt="Stats" /><br><img src="assets/repos-per-language.svg" width="100%" alt="Top Languages" /></td>
+    <td width="65%"><img src="assets/profile-details.svg" width="100%" alt="Profile Details" /><br><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
   </tr>
 </table>
 
@@ -39,5 +39,5 @@ I authored the DingTalk gateway integration and QR-code auth support for [NousRe
 See [AUTHORSHIP.md](https://github.com/PeterGuy326/hermes-agent/blob/authorship-record/AUTHORSHIP.md) in my fork for the full record.
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%" />
+  <img src="assets/footer.svg" width="100%" />
 </p>

@@ -1,0 +1,50 @@
+name: Refresh README assets
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch SVG snapshots
+        run: |
+          mkdir -p assets
+          curl_args=(--fail --silent --show-error --retry 3 --retry-delay 5 --max-time 30)
+
+          curl "${curl_args[@]}" -o assets/header.svg \
+            "https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Hey%20%F0%9F%91%8B%2C%20I'm%20Peter&fontSize=36&fontColor=fff&animation=fadeIn&fontAlignY=28&desc=Node.js%20Developer%20%7C%20JavaScript%20%26amp%3B%20Go%20Enthusiast&descSize=16&descAlignY=50&descAlign=50"
+
+          curl "${curl_args[@]}" -o assets/footer.svg \
+            "https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"
+
+          curl "${curl_args[@]}" -o assets/stats.svg \
+            "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical"
+
+          curl "${curl_args[@]}" -o assets/repos-per-language.svg \
+            "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical"
+
+          curl "${curl_args[@]}" -o assets/profile-details.svg \
+            "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PeterGuy326&theme=radical"
+
+          curl "${curl_args[@]}" -o assets/activity-graph.svg \
+            "https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=radical&area=true&hide_border=true"
+
+      - name: Commit refreshed assets if changed
+        run: |
+          if [[ -z "$(git status --porcelain assets/)" ]]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/
+          git commit -m "chore(assets): refresh README SVG snapshots"
+          git push
