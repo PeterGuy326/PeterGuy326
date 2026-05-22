@@ -74,11 +74,9 @@ const leftX   = round(CX - radius(pct.commits));
 const rightX  = round(CX + radius(pct.issues));
 const bottomY = round(CY + radius(pct.prs));
 
-const updated = new Date().toISOString();
-
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 520" width="730" height="520" role="img" aria-label="Contribution breakdown radar for ${USERNAME}">
   <title>${USERNAME} — contribution breakdown (last year)</title>
-  <desc>Generated ${updated}. Commits ${fmt(pct.commits)}% · PRs ${fmt(pct.prs)}% · Code review ${fmt(pct.reviews)}% · Issues ${fmt(pct.issues)}%</desc>
+  <desc>Commits ${fmt(pct.commits)}% · PRs ${fmt(pct.prs)}% · Code review ${fmt(pct.reviews)}% · Issues ${fmt(pct.issues)}%</desc>
   <rect width="730" height="520" fill="#0d1117"/>
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
     <line x1="${CX}" y1="${CY}" x2="${CX}" y2="110" stroke="#40c463" stroke-width="2"/>
@@ -106,8 +104,6 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 520" width
 
     <text x="${CX}" y="448" fill="#c9d1d9" font-size="20" font-weight="600">${fmt(pct.prs)}%</text>
     <text x="${CX}" y="472" fill="#8b949e" font-size="16">Pull requests</text>
-
-    <text x="715" y="510" fill="#484f58" font-size="10" text-anchor="end">updated ${updated.slice(0, 10)}</text>
   </g>
 </svg>
 `;
@@ -116,4 +112,4 @@ const here = dirname(fileURLToPath(import.meta.url));
 const outPath = resolve(here, '..', 'assets', 'contribution-radar.svg');
 writeFileSync(outPath, svg);
 
-console.log(JSON.stringify({ counts, pct: Object.fromEntries(Object.entries(pct).map(([k, v]) => [k, +v.toFixed(2)])), total, updated, outPath }, null, 2));
+console.log(JSON.stringify({ counts, pct: Object.fromEntries(Object.entries(pct).map(([k, v]) => [k, +v.toFixed(2)])), total, outPath }, null, 2));
