@@ -38,9 +38,8 @@ MSG_FILE="$1"
 [ -f "$MSG_FILE" ] || exit 0
 
 sed -i.bak -E \
-  -e '/^[Cc]o-[Aa]uthored-[Bb]y:[[:space:]]*Claude/d' \
-  -e '/[Gg]enerated with Claude Code/d' \
-  -e '/noreply@anthropic\.com/d' \
+  -e '/^[Cc]o-[Aa]uthored-[Bb]y:[[:space:]]+Claude[^[:space:]]*[[:space:]]+/d' \
+  -e '/^[[:space:]]*🤖[[:space:]]+Generated with Claude Code[[:space:]]*$/d' \
   "$MSG_FILE"
 rm -f "${MSG_FILE}.bak"
 
