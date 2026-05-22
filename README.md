@@ -19,6 +19,10 @@
   </tr>
 </table>
 
+<p align="center">
+  <img src="./assets/contribution-radar.svg" width="60%" alt="Contribution Breakdown" />
+</p>
+
 ## Open Source Contributions / 开源贡献
 
 ### NousResearch/hermes-agent — DingTalk Gateway
