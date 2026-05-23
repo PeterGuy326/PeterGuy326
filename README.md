@@ -15,27 +15,23 @@
 <table>
   <tr>
     <td width="35%"><img src="assets/stats.svg" width="100%" alt="Stats" /><br><img src="assets/repos-per-language.svg" width="100%" alt="Top Languages" /></td>
-    <td width="65%"><img src="assets/profile-details.svg" width="100%" alt="Profile Details" /><br><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
+    <td width="65%"><img src="assets/profile-details.svg" width="100%" alt="Profile Details" /></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <td width="50%"><img src="./assets/contribution-radar.svg" width="100%" alt="Contribution Breakdown" /></td>
-    <td width="50%"><img src="./assets/productive-time.svg" width="100%" alt="Productive Time Heatmap" /></td>
+    <td width="60%"><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
+    <td width="40%"><img src="./assets/contribution-radar.svg" width="100%" alt="Contribution Breakdown" /></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="https://github.com/PeterGuy326"><img src="https://github-profile-trophy.vercel.app/?username=PeterGuy326&theme=radical&column=7&margin-w=15&margin-h=15&no-frame=true" alt="GitHub Trophies" /></a>
+  <img src="./assets/productive-time.svg" width="90%" alt="Productive Time Heatmap" />
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake.svg" />
-    <img src="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake.svg" alt="Snake animation eating contribution graph" />
-  </picture>
+  <a href="https://github.com/PeterGuy326"><img src="https://github-profile-trophy.vercel.app/?username=PeterGuy326&theme=radical&column=7&margin-w=15&margin-h=15&no-frame=true" alt="GitHub Trophies" /></a>
 </p>
 
 ## Open Source Contributions / 开源贡献
