@@ -21,8 +21,8 @@
 
 <table>
   <tr>
-    <td width="35%"><img src="assets/stats.svg" width="100%" alt="Stats" /><br><img src="assets/repos-per-language.svg" width="100%" alt="Top Languages" /></td>
-    <td width="65%"><img src="assets/profile-details.svg" width="100%" alt="Profile Details" /></td>
+    <td width="50%"><img src="assets/stats.svg" width="100%" alt="Stats" /></td>
+    <td width="50%"><img src="assets/repos-per-language.svg" width="100%" alt="Top Languages" /></td>
   </tr>
 </table>
 
