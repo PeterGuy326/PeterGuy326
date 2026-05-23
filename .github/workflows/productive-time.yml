@@ -1,0 +1,38 @@
+name: Update Productive Time Heatmap
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRODUCTIVE_USERNAME: PeterGuy326
+          PRODUCTIVE_TZ: Asia/Shanghai
+        run: node scripts/generate-productive-time.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- assets/productive-time.svg; then
+            echo "No changes — skipping commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/productive-time.svg
+          git commit -m "chore: refresh productive time heatmap"
+          git push

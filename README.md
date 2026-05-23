@@ -19,8 +19,23 @@
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td width="50%"><img src="./assets/contribution-radar.svg" width="100%" alt="Contribution Breakdown" /></td>
+    <td width="50%"><img src="./assets/productive-time.svg" width="100%" alt="Productive Time Heatmap" /></td>
+  </tr>
+</table>
+
 <p align="center">
-  <img src="./assets/contribution-radar.svg" width="60%" alt="Contribution Breakdown" />
+  <a href="https://github.com/PeterGuy326"><img src="https://github-profile-trophy.vercel.app/?username=PeterGuy326&theme=radical&column=7&margin-w=15&margin-h=15&no-frame=true" alt="GitHub Trophies" /></a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake.svg" />
+    <img src="https://raw.githubusercontent.com/PeterGuy326/PeterGuy326/output/github-snake.svg" alt="Snake animation eating contribution graph" />
+  </picture>
 </p>
 
 ## Open Source Contributions / 开源贡献
