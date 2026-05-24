@@ -62,48 +62,42 @@ const pct = {
   prs: (counts.prs / total) * 100,
   reviews: (counts.reviews / total) * 100,
 };
-const max = Math.max(pct.commits, pct.issues, pct.prs, pct.reviews);
-
-const CX = 365, CY = 260, R_MAX = 130;
-const radius = (p) => (p / max) * R_MAX;
-const round = (n) => Math.round(n * 10) / 10;
 const fmt = (p) => Math.round(p);
 
-const topY    = round(CY - radius(pct.reviews));
-const leftX   = round(CX - radius(pct.commits));
-const rightX  = round(CX + radius(pct.issues));
-const bottomY = round(CY + radius(pct.prs));
+const W = 1200, H = 420;
+const LABEL_X = 220;
+const BAR_X = 240;
+const BAR_END = 1120;
+const BAR_MAX_WIDTH = BAR_END - BAR_X;
+const BAR_H = 44;
+const Y_START = 110;
+const Y_GAP = 22;
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 40 600 450" width="600" height="450" role="img" aria-label="Contribution breakdown radar for ${USERNAME}">
+const bars = [
+  { label: 'Commits',       pct: pct.commits },
+  { label: 'Pull requests', pct: pct.prs     },
+  { label: 'Code review',   pct: pct.reviews },
+  { label: 'Issues',        pct: pct.issues  },
+];
+
+const barRows = bars.map((b, i) => {
+  const y = Y_START + i * (BAR_H + Y_GAP);
+  const w = Math.max(2, Math.round((b.pct / 100) * BAR_MAX_WIDTH));
+  const textCy = y + BAR_H / 2 + 6;
+  return `    <text x="${LABEL_X}" y="${textCy}" fill="#c9d1d9" font-size="20" text-anchor="end" font-weight="500">${b.label}</text>
+    <rect x="${BAR_X}" y="${y}" width="${BAR_MAX_WIDTH}" height="${BAR_H}" rx="6" ry="6" fill="#161b22"/>
+    <rect x="${BAR_X}" y="${y}" width="${w}" height="${BAR_H}" rx="6" ry="6" fill="#40c463" fill-opacity="0.9"/>
+    <text x="${BAR_X + w + 14}" y="${textCy}" fill="#c9d1d9" font-size="22" font-weight="700">${fmt(b.pct)}%</text>`;
+}).join('\n');
+
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Contribution breakdown for ${USERNAME}">
   <title>${USERNAME} — contribution breakdown (last year)</title>
   <desc>Commits ${fmt(pct.commits)}% · PRs ${fmt(pct.prs)}% · Code review ${fmt(pct.reviews)}% · Issues ${fmt(pct.issues)}%</desc>
-  <rect x="70" y="40" width="600" height="450" fill="#0d1117"/>
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
-    <line x1="${CX}" y1="${CY}" x2="${CX}" y2="110" stroke="#40c463" stroke-width="2"/>
-    <line x1="${CX}" y1="${CY}" x2="${CX}" y2="410" stroke="#40c463" stroke-width="2"/>
-    <line x1="${CX}" y1="${CY}" x2="215" y2="${CY}" stroke="#40c463" stroke-width="2"/>
-    <line x1="${CX}" y1="${CY}" x2="515" y2="${CY}" stroke="#40c463" stroke-width="2"/>
-
-    <polygon points="${CX},${topY} ${rightX},${CY} ${CX},${bottomY} ${leftX},${CY}"
-             fill="#40c463" fill-opacity="0.55" stroke="#40c463" stroke-width="2"/>
-
-    <circle cx="${CX}"     cy="${topY}"    r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
-    <circle cx="${rightX}" cy="${CY}"      r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
-    <circle cx="${CX}"     cy="${bottomY}" r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
-    <circle cx="${leftX}"  cy="${CY}"      r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
-    <circle cx="${CX}"     cy="${CY}"      r="4" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
-
-    <text x="${CX}" y="68"  fill="#c9d1d9" font-size="20" font-weight="600">${fmt(pct.reviews)}%</text>
-    <text x="${CX}" y="92"  fill="#8b949e" font-size="16">Code review</text>
-
-    <text x="120"   y="254" fill="#c9d1d9" font-size="20" font-weight="600">${fmt(pct.commits)}%</text>
-    <text x="120"   y="278" fill="#8b949e" font-size="16">Commits</text>
-
-    <text x="610"   y="254" fill="#c9d1d9" font-size="20" font-weight="600">${fmt(pct.issues)}%</text>
-    <text x="610"   y="278" fill="#8b949e" font-size="16">Issues</text>
-
-    <text x="${CX}" y="448" fill="#c9d1d9" font-size="20" font-weight="600">${fmt(pct.prs)}%</text>
-    <text x="${CX}" y="472" fill="#8b949e" font-size="16">Pull requests</text>
+  <rect width="${W}" height="${H}" fill="#0d1117"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="${W / 2}" y="60" fill="#ff6b9a" font-size="26" font-weight="700" text-anchor="middle">Contribution Breakdown</text>
+    <text x="${W / 2}" y="88" fill="#8b949e" font-size="14" text-anchor="middle">last year · ${counts.commits + counts.prs + counts.reviews + counts.issues} contributions across commits / PRs / code review / issues</text>
+${barRows}
   </g>
 </svg>
 `;

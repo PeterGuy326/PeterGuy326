@@ -14,12 +14,9 @@
 </p>
 <table>
   <tr>
-    <td width="68%"><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
-    <td width="32%"><img src="./assets/contribution-radar.svg" width="100%" alt="Contribution Breakdown" /></td>
+    <td width="50%"><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
+    <td width="50%"><img src="./assets/contribution-radar.svg" width="100%" alt="Contribution Breakdown" /></td>
   </tr>
-</table>
-
-<table>
   <tr>
     <td width="50%"><img src="assets/stats.svg" width="100%" alt="Stats" /></td>
     <td width="50%"><img src="assets/repos-per-language.svg" width="100%" alt="Top Languages" /></td>
