@@ -57,9 +57,6 @@ jobs:
           fetch_validated assets/stats.svg \
             "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PeterGuy326&theme=radical"
 
-          fetch_validated assets/repos-per-language.svg \
-            "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PeterGuy326&theme=radical"
-
           fetch_validated assets/activity-graph.svg \
             "https://github-readme-activity-graph.vercel.app/graph?username=PeterGuy326&theme=radical&area=true&hide_border=true"
 

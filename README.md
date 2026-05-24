@@ -12,6 +12,10 @@
   <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" />&nbsp;
   <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
 </p>
+<p align="center">
+  <img src="assets/contribution-radar.svg" width="55%" alt="Contribution Breakdown" />
+</p>
+
 <table>
   <tr>
     <td width="50%"><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
@@ -23,7 +27,7 @@
   </tr>
   <tr>
     <td width="50%"><img src="assets/stats.svg" width="100%" alt="Stats" /></td>
-    <td width="50%"><img src="assets/repos-per-language.svg" width="100%" alt="Top Languages" /></td>
+    <td width="50%"><img src="assets/commit-activity.svg" width="100%" alt="Commit Activity (last 52 weeks)" /></td>
   </tr>
 </table>
 
