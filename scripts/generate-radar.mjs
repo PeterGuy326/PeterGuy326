@@ -74,10 +74,10 @@ const leftX   = round(CX - radius(pct.commits));
 const rightX  = round(CX + radius(pct.issues));
 const bottomY = round(CY + radius(pct.prs));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 520" width="730" height="520" role="img" aria-label="Contribution breakdown radar for ${USERNAME}">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 40 600 450" width="600" height="450" role="img" aria-label="Contribution breakdown radar for ${USERNAME}">
   <title>${USERNAME} — contribution breakdown (last year)</title>
   <desc>Commits ${fmt(pct.commits)}% · PRs ${fmt(pct.prs)}% · Code review ${fmt(pct.reviews)}% · Issues ${fmt(pct.issues)}%</desc>
-  <rect width="730" height="520" fill="#0d1117"/>
+  <rect x="70" y="40" width="600" height="450" fill="#0d1117"/>
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
     <line x1="${CX}" y1="${CY}" x2="${CX}" y2="110" stroke="#40c463" stroke-width="2"/>
     <line x1="${CX}" y1="${CY}" x2="${CX}" y2="410" stroke="#40c463" stroke-width="2"/>

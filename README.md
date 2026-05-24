@@ -14,8 +14,8 @@
 </p>
 <table>
   <tr>
-    <td width="60%"><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
-    <td width="40%"><img src="./assets/contribution-radar.svg" width="100%" alt="Contribution Breakdown" /></td>
+    <td width="68%"><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
+    <td width="32%"><img src="./assets/contribution-radar.svg" width="100%" alt="Contribution Breakdown" /></td>
   </tr>
 </table>
 
