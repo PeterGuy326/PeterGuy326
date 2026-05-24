@@ -15,7 +15,11 @@
 <table>
   <tr>
     <td width="50%"><img src="assets/activity-graph.svg" width="100%" alt="Activity Graph" /></td>
-    <td width="50%"><img src="./assets/contribution-radar.svg" width="100%" alt="Contribution Breakdown" /></td>
+    <td width="50%"><a href="https://github.com/PeterGuy326/mem"><img src="assets/pin-mem.svg" width="100%" alt="mem" /></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://github.com/PeterGuy326/git-skill"><img src="assets/pin-git-skill.svg" width="100%" alt="git-skill" /></a></td>
+    <td width="50%"><a href="https://github.com/PeterGuy326/ai-ops-auto"><img src="assets/pin-ai-ops-auto.svg" width="100%" alt="ai-ops-auto" /></a></td>
   </tr>
   <tr>
     <td width="50%"><img src="assets/stats.svg" width="100%" alt="Stats" /></td>

@@ -1,4 +1,4 @@
-name: Update Contribution Radar
+name: Refresh Pinned Repo Cards
 
 on:
   schedule:
@@ -18,20 +18,21 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Generate SVG
+      - name: Generate pin SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RADAR_USERNAME: PeterGuy326
-        run: node scripts/generate-radar.mjs
+          PIN_DEFAULT_OWNER: PeterGuy326
+          PIN_REPOS: mem,git-skill,ai-ops-auto
+        run: node scripts/generate-pin-cards.mjs
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- assets/contribution-radar.svg; then
+          if git diff --quiet -- assets/pin-*.svg; then
             echo "No changes — skipping commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/contribution-radar.svg
-          git commit -m "chore: refresh contribution radar"
+          git add assets/pin-*.svg
+          git commit -m "chore: refresh pinned repo cards"
           git push
