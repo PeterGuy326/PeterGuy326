@@ -27,7 +27,7 @@
   </tr>
   <tr>
     <td width="50%"><img src="assets/stats.svg" width="100%" alt="Stats" /></td>
-    <td width="50%"><img src="assets/commit-activity.svg" width="100%" alt="Commit Activity (last 52 weeks)" /></td>
+    <td width="50%"><img src="assets/commit-activity.svg" width="100%" alt="Commit Activity" /></td>
   </tr>
 </table>
 

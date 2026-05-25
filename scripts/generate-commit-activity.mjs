@@ -50,10 +50,35 @@ const weekTotals = weeks.map((w) => ({
   firstDay: w.firstDay,
   total: w.contributionDays.reduce((s, d) => s + d.contributionCount, 0),
 }));
-const last52 = weekTotals.slice(-52);
-if (last52.length === 0) {
+const full52 = weekTotals.slice(-52);
+if (full52.length === 0) {
   console.error('No weeks returned');
   process.exit(1);
+}
+// Trim away long dead zones: find the most recent run of >= GAP_THRESHOLD
+// consecutive zero weeks and crop to the week immediately after it (with one
+// week of leading padding). Keeps the chart dense when there is a long stretch
+// of inactivity earlier in the year. Untouched when the calendar is already
+// reasonably full.
+const GAP_THRESHOLD = 8;
+let latestGapEnd = -1;
+let runStart = -1;
+for (let i = 0; i < full52.length; i++) {
+  if (full52[i].total === 0) {
+    if (runStart === -1) runStart = i;
+  } else {
+    if (runStart !== -1 && i - runStart >= GAP_THRESHOLD) {
+      latestGapEnd = i;
+    }
+    runStart = -1;
+  }
+}
+let last52 = full52;
+let trimmedFrom = null;
+if (latestGapEnd > 0) {
+  const start = Math.max(0, latestGapEnd - 1);
+  last52 = full52.slice(start);
+  trimmedFrom = full52[start].firstDay;
 }
 const peak = Math.max(...last52.map((w) => w.total));
 const total = last52.reduce((s, w) => s + w.total, 0);
@@ -106,13 +131,14 @@ const ticks = monthTicks
   })
   .join('');
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Commit activity bars — last 52 weeks for ${USERNAME}">
-  <title>${USERNAME} — commit activity (last 52 weeks)</title>
+const rangeLabel = trimmedFrom ? `since ${trimmedFrom}` : `last ${last52.length} weeks`;
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Commit activity bars — ${rangeLabel} for ${USERNAME}">
+  <title>${USERNAME} — commit activity (${rangeLabel})</title>
   <desc>${total} contributions across ${last52.length} weeks; peak week ${peak} contributions.</desc>
   <rect width="${W}" height="${H}" rx="6" ry="6" fill="#141321"/>
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
     <text x="${PAD_X}" y="24" fill="#fe428e" font-size="15" font-weight="700">Commit Activity</text>
-    <text x="${PAD_X}" y="40" fill="#8b949e" font-size="11">last 52 weeks · peak ${peak} · total ${total}</text>
+    <text x="${PAD_X}" y="40" fill="#8b949e" font-size="11">${trimmedFrom ? `since ${trimmedFrom}` : 'last 52 weeks'} · ${last52.length} weeks · peak ${peak} · total ${total}</text>
     ${bars}
     ${ticks}
   </g>
@@ -123,4 +149,4 @@ const here = dirname(fileURLToPath(import.meta.url));
 const outPath = resolve(here, '..', 'assets', 'commit-activity.svg');
 writeFileSync(outPath, svg);
 
-console.log(JSON.stringify({ weeks: last52.length, peak, total, outPath }, null, 2));
+console.log(JSON.stringify({ weeks: last52.length, trimmedFrom, peak, total, outPath }, null, 2));
