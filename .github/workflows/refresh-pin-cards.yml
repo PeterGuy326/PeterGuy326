@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PIN_DEFAULT_OWNER: PeterGuy326
-          PIN_REPOS: mem,git-skill,ai-ops-auto
+          PIN_REPOS: mem,DingTalk-Real-AI/dingtalk-workspace-cli,ai-ops-auto
         run: node scripts/generate-pin-cards.mjs
 
       - name: Commit if changed

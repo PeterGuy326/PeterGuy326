@@ -22,7 +22,7 @@
     <td width="50%"><a href="https://github.com/PeterGuy326/mem"><img src="assets/pin-mem.svg" width="100%" alt="mem" /></a></td>
   </tr>
   <tr>
-    <td width="50%"><a href="https://github.com/PeterGuy326/git-skill"><img src="assets/pin-git-skill.svg" width="100%" alt="git-skill" /></a></td>
+    <td width="50%"><a href="https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli"><img src="assets/pin-dingtalk-workspace-cli.svg" width="100%" alt="dingtalk-workspace-cli" /></a></td>
     <td width="50%"><a href="https://github.com/PeterGuy326/ai-ops-auto"><img src="assets/pin-ai-ops-auto.svg" width="100%" alt="ai-ops-auto" /></a></td>
   </tr>
   <tr>

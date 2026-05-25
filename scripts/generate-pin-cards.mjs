@@ -10,7 +10,7 @@ if (!TOKEN) {
 }
 
 const DEFAULT_OWNER = process.env.PIN_DEFAULT_OWNER || 'PeterGuy326';
-const PINS = (process.env.PIN_REPOS || 'mem,git-skill,ai-ops-auto')
+const PINS = (process.env.PIN_REPOS || 'mem,DingTalk-Real-AI/dingtalk-workspace-cli,ai-ops-auto')
   .split(',')
   .map((s) => s.trim())
   .filter(Boolean);
