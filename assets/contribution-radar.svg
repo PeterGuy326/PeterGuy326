@@ -8,12 +8,12 @@
     <line x1="365" y1="260" x2="215" y2="260" stroke="#40c463" stroke-width="2"/>
     <line x1="365" y1="260" x2="515" y2="260" stroke="#40c463" stroke-width="2"/>
 
-    <polygon points="365,237.2 401.2,260 365,333.8 235,260"
+    <polygon points="365,235.8 401.5,260 365,334.8 235,260"
              fill="#40c463" fill-opacity="0.55" stroke="#40c463" stroke-width="2"/>
 
-    <circle cx="365"     cy="237.2"    r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
-    <circle cx="401.2" cy="260"      r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
-    <circle cx="365"     cy="333.8" r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
+    <circle cx="365"     cy="235.8"    r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
+    <circle cx="401.5" cy="260"      r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
+    <circle cx="365"     cy="334.8" r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
     <circle cx="235"  cy="260"      r="5" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
     <circle cx="365"     cy="260"      r="4" fill="#0d1117" stroke="#40c463" stroke-width="2"/>
 
